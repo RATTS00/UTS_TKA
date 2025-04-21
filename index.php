@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
         window.location.href='voter/vote.php';
         </script>
         ";
-        exit(); // Important: prevent rest of page from rendering
+        exit();
     } else {
         echo "
         <script>
@@ -26,12 +26,11 @@ if (isset($_POST["submit"])) {
         window.location.href='index.php';
         </script>
         ";
-        exit(); // Prevent form from rendering again unnecessarily
+        exit(); 
     }
 }
 ?>
 
-<!-- HTML content will only render if no redirect is triggered above -->
 <div class="container min-vh-100 d-flex justify-content-center align-items-center">
     <form action="" method="post" class="d-flex flex-column gap-2 shadow-4 p-5">
         <label for="nisn" class="me-2">NISN</label>
